@@ -1,41 +1,68 @@
-# Croak City V2
+# Croak City V3
 
 NFT Collection deployed on Quai Network.
 
+## Features
+
+- Maximum supply: 420 NFTs
+- Configurable mint cost
+- Pausable minting
+- Owner controls:
+  - Base URI updates
+  - Mint cost adjustments
+  - Contract pause/unpause
+  - Fund withdrawal
+
 ## Setup
 
-1. Install dependencies:
+1. Clone the repository:
+```bash
+git clone git@github.com:Bradbuythedip/croakcityv3.git
+cd croakcityv3
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Configure your private key:
-- Copy `.env.example` to `.env`
-- Add your private key to `.env`
+3. Configure environment:
+```bash
+cp .env.example .env
+# Edit .env with your private key and IPFS URI
+```
 
-3. Deploy:
+4. Deploy:
 ```bash
 npm run deploy:cyprus1
 ```
 
-## Contract Features
+## Contract Details
 
-- Maximum supply: 420 NFTs
-- Mintable with QUAI
-- Owner can:
-  - Set base URI
-  - Set mint cost
-  - Pause/unpause minting
-  - Withdraw funds
+- Network: Quai Cyprus1 (Testnet)
+- Contract: `CroakCity.sol`
+- Standard: ERC721 Enumerable
+- Dependencies: OpenZeppelin contracts
 
-## Networks
+## Development
 
-- Cyprus1 (Quai Testnet)
-  - ChainID: 9000
-  - RPC: https://rpc.cyprus1.colosseum.quaiscan.io
+- Test: `npm test`
+- Compile: `npm run compile`
+- Deploy: `npm run deploy:cyprus1`
 
 ## Security
 
-- Private keys are stored in `.env` (never commit this file)
+- Private keys stored in `.env` (never commit)
 - OpenZeppelin contracts for security
-- Owner privileges for essential functions only
+- Owner-only privileged functions
+- Comprehensive test suite
+
+## Networks
+
+### Cyprus1 (Quai Testnet)
+- ChainID: 9000
+- RPC: https://rpc.cyprus1.colosseum.quaiscan.io
+
+## License
+
+MIT
