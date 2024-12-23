@@ -1,0 +1,14 @@
+{
+  "name": "croakcity-v2",
+  "version": "1.0.0",
+  "description": "Croak City NFT Collection on Quai Network",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy:cyprus1": "hardhat run scripts/deploy.js --network cyprus1"
+  },
+  "keywords": ["nft", "quai", "ethereum", "solidity"],
+  "author": "bradbuythedip",
+  "license": "MIT"
+}
